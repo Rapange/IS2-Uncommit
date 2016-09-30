@@ -1,0 +1,5 @@
+/.pub/
+/.idea/
+/.packages
+/pubspec.lock
+/bin/packages
