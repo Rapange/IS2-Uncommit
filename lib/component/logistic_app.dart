@@ -40,7 +40,7 @@ class LogisticApp implements AfterViewInit {
 }
 
 @Component(selector: 'd')
-@View(template: '<div>Welcomp {{name}}!</div>')
+@View(template: '<div>Welcome {{name}}!</div>')
 class HomeComp {
   String name;
   HomeComp() : name = 'Logistic Application' {}
