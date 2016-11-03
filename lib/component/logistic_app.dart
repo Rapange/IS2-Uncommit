@@ -7,6 +7,7 @@ import 'package:logistic_ui/component/user/user_panel.dart';
 import 'package:logistic_ui/component/header_panel.dart';
 import 'package:logistic_ui/component/footer_panel.dart';
 import 'package:logistic_ui/providers.dart';
+//import {DropdownModule} from "ng2-dropdown";
 
 @Component(
     selector: 'logistic-app',
@@ -22,7 +23,6 @@ class LogisticApp implements AfterViewInit {
   @ViewChild(HeaderPanel)
   HeaderPanel headerPanel;
   bool isLoading = true;
-
   @ViewChild(FooterPanel)
   FooterPanel footerPanel;
 

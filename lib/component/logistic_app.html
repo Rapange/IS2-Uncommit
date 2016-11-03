@@ -7,72 +7,53 @@
         <a [routerLink]="['About']">About</a>
     </nav>
     <button style="display: none;" (click)="goAbout()">Go</button>
-    <div class="col-md-12">
-        <ul class="logo">
-            <li>
-                <a href="#">LLLLLLL</a>
-            </li>
-            <li >
-                <a href="#">Hola</a>
-            </li>
-            <li>
-                <a href="#">Aqui</a>
-            </li>
-            <li>
-                <a href="single.html">Coloquen</a>
-            </li>
-            <li>
-                <a href="#">Lo</a>
-            </li>
-            <li>
-                <a href="#">Que</a>
-            </li>
-            <li>
-                <a href="#">Deseen</a>
-            </li>
-            <li>
-                <a href="#">LLLLLLL</a>
-            </li>
-            <li >
-                <a href="#">Hola</a>
-            </li>
-            <li>
-                <a href="#">Aqui</a>
-            </li>
-            <li>
-                <a href="single.html">Coloquen</a>
-            </li>
-            <li>
-                <a href="#">Lo</a>
-            </li>
-            <li>
-                <a href="#">Que</a>
-            </li>
-            <li>
-                <a href="#">Deseen</a>
-            </li>
-            <li>
-                <a href="#">LLLLLLL</a>
-            </li>
-            <li >
-                <a href="#">Hola</a>
-            </li>
-            <li>
-                <a href="#">Aqui</a>
-            </li>
-            <li>
-                <a href="single.html">Coloquen</a>
-            </li>
-            <li>
-                <a href="#">Lo</a>
-            </li>
-            <li>
-                <a href="#">Que</a>
-            </li>
-            <li>
-                <a href="#">Deseen</a>
-            </li>
-        </ul>
+     <div class="col-md-12">
+         
+         <br><br><br><br><br><br> <!-- placeholder -->
+         
+         <!-- rproduct definido en header_panel.dart junto con función que cambia el valor -->
+         <div *ngIf="headerPanel.rproduct == true" class="centered">
+            <h2> Registrar Producto</h2>
+            <form action="">
+                <font color="white">Descripci&oacute;n:</font> <input type="text"><br>
+            
+            <table style="width:100%">
+                <tr>
+                
+                    <td>
+                    <!-- col-lg-4 col-md-offset-4 pone el dropdown en su lugar -->
+                <div class="dropdown col-lg-4 col-md-offset-4">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownGroup" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Grupo
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownGroup">
+                    <li><a href="#">Grupo 1</a></li>
+                    <li><a href="#">Grupo 2</a></li>
+                    <li><a href="#">Grupo 3</a></li>
+                  </ul>
+                </div>
+                    </td>
+                    
+                    <td>
+                <div class="dropdown col-lg-4 col-md-offset-4">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownSubGroup" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Subgrupo
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownSubGroup">
+                    <li><a href="#">Subgrupo 1</a></li>
+                    <li><a href="#">Subgrupo 2</a></li>
+                    <li><a href="#">Subgrupo 3</a></li>
+                  </ul>
+                </div>
+                    </td>
+                    
+                </tr>
+            </table>
+
+            </form>
+         </div>
     </div>
     <router-outlet></router-outlet>
 </div>
