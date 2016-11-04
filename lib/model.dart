@@ -31,3 +31,17 @@ class User {
   String email;
   String get name => "$firstName $lastName";
 }
+
+@Entity()
+class ProductSales {
+
+  int idProduct;
+  String name;
+  int  price;
+  int  quantity;
+  bool avaible;
+  String productType;
+  ProductSales(this.idProduct, this.name, this.price, this.quantity, this.avaible, this.productType);
+}
+
+
