@@ -85,7 +85,7 @@ body.sub-page .logo {margin: 110px 0 80px;background: url(../images/bg.jpg) fixe
 .navbar-default .nav-justified li.active a {background-color: #DE5781;}
 
 @media(min-width:768px) {
-    .navbar-default {padding: 25px 0;border: 0;background-color: transparent;-webkit-transition: padding .3s;-moz-transition: padding .3s;transition: padding .3s;}
+    .navbar-default {padding: 25px 0;border: 0;background-color: #E3D1A2;-webkit-transition: padding .3s;-moz-transition: padding .3s;transition: padding .3s;}
     .navbar-default.navbar-shrink {padding: 0px 0;background-color: #668284;}
     .navbar-default.navbar-shrink .navbar-brand {font-size: 1.5em;}
 }
