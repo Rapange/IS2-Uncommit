@@ -18,7 +18,7 @@ const List<String> _products = const [
 class ProductSalesFormComponent {
   List<String> get products => _products;
   bool submitted = false;
-  ProductSales model = new ProductSales(1,"Caja",100,17,1,_products[0]);
+  ProductSales model = new ProductSales(1,"Caja",100,17,false,_products[0]);
   onSubmit() {
     submitted = true;
   }
@@ -26,30 +26,3 @@ class ProductSalesFormComponent {
 
 
 
-
-
-/*
-
-@Component(selector: 'user-panel', templateUrl: 'user_panel.html', viewProviders: const [LOGISTIC_SERVICE_PROVIDERS])
-class UserPanel implements AfterViewInit {
-  List<User> users;
-  User selectedUser;
-  ApplicationService applicationService;
-
-  UserPanel(this.applicationService);
-
-  void ngAfterViewInit() {
-    applicationService.getUsers().then((List<User> users) {
-      this.users = users;
-    });
-  }
-
-  void set data(List<User> users) {
-    this.users = users;
-  }
-
-  void onSelect(User user) {
-    this.selectedUser = user;
-  }
-}
-*/

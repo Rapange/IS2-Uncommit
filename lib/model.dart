@@ -45,3 +45,11 @@ class ProductSales {
 }
 
 
+@Entity()
+class AdmnistratorSales {
+  int id;
+  String firstName;
+  String lastName;
+  String email;
+  String get name => "$firstName $lastName";
+}
