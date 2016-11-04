@@ -7,7 +7,7 @@ import 'package:logistic_ui/component/user/user_panel.dart';
 import 'package:logistic_ui/component/header_panel.dart';
 import 'package:logistic_ui/component/footer_panel.dart';
 import 'package:logistic_ui/providers.dart';
-//import {DropdownModule} from "ng2-dropdown";
+
 
 @Component(
     selector: 'logistic-app',
@@ -23,6 +23,12 @@ class LogisticApp implements AfterViewInit {
   @ViewChild(HeaderPanel)
   HeaderPanel headerPanel;
   bool isLoading = true;
+  bool added = false;
+  List<String> groups = ['Grupo 1', 'Grupo 2', 'Grupo 3'];
+  List<String> subGroups = ['Subgrupo 1','Subgrupo 2'];
+  String currentGroup = 'Grupo';
+  String currentSubGroup = 'Subgrupo';
+  String descripcion = '';
   @ViewChild(FooterPanel)
   FooterPanel footerPanel;
 
@@ -36,6 +42,18 @@ class LogisticApp implements AfterViewInit {
 
   void goAbout() {
     router.navigate(['About']);
+  }
+
+  void catchGroup(String group){
+    this.currentGroup = group;
+  }
+
+  void catchSubGroup(String subGroup){
+    this.currentSubGroup = subGroup;
+  }
+
+  void add(){
+    this.added = true;
   }
 }
 
