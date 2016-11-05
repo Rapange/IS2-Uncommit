@@ -23,11 +23,20 @@ class LogisticApp implements AfterViewInit {
   HeaderPanel headerPanel;
   bool isLoading = true;
   bool added = false;
+  bool modified = false;
+  //Variables para registrar un usuario
   List<String> type = ['Administrador de Ventas', 'Administrador de Producto'];
   String currentType = 'Tipo de usuario';
   String nombre = '';
   String apellido = '';
   String correo = '';
+  //Variables para modificar un usuario
+  List<String> ids = ['1', '2', '3', '4'];
+  String currentIds = 'ID de usuario';
+  String mnombre = '';
+  String mapellido = '';
+  String mcorreo = '';
+
   @ViewChild(FooterPanel)
   FooterPanel footerPanel;
 
@@ -47,8 +56,14 @@ class LogisticApp implements AfterViewInit {
     this.currentType = type;
   }
 
+  void catchIds(String ids){
+    this.currentIds = ids;
+  }
   void add(){
     this.added = true;
+  }
+  void modify(){
+    this.modified = true;
   }
 }
 

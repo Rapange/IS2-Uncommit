@@ -15,6 +15,7 @@ class HeaderPanel implements AfterViewInit {
 
   HeaderPanel(ApplicationService this.applicationService);
   bool ruser = false;
+  bool muser = false;
   void ngAfterViewInit() {
     applicationService.getApplicationInfo().then((ApplicationInfo appInfo) {
       applicationInfo = appInfo;
@@ -22,5 +23,8 @@ class HeaderPanel implements AfterViewInit {
   }
   void clickRUser(){
     this.ruser = !this.ruser;
+  }
+  void clickMUser(){
+    this.muser = !this.muser;
   }
 }
