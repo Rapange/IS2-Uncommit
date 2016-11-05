@@ -5,6 +5,7 @@ import 'package:angular2/router.dart';
 
 import 'package:logistic_ui/component/user/user_panel.dart';
 import 'package:logistic_ui/component/administrator_sales/product_sales_form_component.dart';/*Incluyendo Componente ProductoSales*/
+import 'package:logistic_ui/component/administrator_sales/report_sales.dart';/*Incluyendo Componente ProductoSales*/
 
 import 'package:logistic_ui/component/administrator_product_out/product_out_form_component.dart'; /*Incluyendo Componente ProdcutsOut*/
 
@@ -24,6 +25,7 @@ import 'package:logistic_ui/providers.dart';
   const Route(path: '/user', component: UserPanel, name: 'Users'),
   const Route(path: '/formSales', component: ProductSalesFormComponent, name: 'ProductsSale'),
   const Route(path: '/formOut', component: ProductOutFormComponent, name: 'ProductsOut'),
+  const Route(path: '/reportSales', component: ReportSalesComponent, name: 'ReportSales'),
 ])
 
 class LogisticApp implements AfterViewInit {
