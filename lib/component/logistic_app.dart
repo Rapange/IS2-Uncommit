@@ -56,6 +56,9 @@ class LogisticApp implements AfterViewInit {
   void add(){
     this.added = true;
   }
+  void addProvider(){
+
+  }
 }
 
 @Component(selector: 'd')
