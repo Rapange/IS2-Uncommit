@@ -8,6 +8,8 @@ import 'package:logistic_ui/component/header_panel.dart';
 import 'package:logistic_ui/component/footer_panel.dart';
 import 'package:logistic_ui/providers.dart';
 
+//imports
+import 'package:logistic_ui/component/user_product_management/user_product_management.dart';
 
 @Component(
     selector: 'logistic-app',
@@ -18,6 +20,7 @@ import 'package:logistic_ui/providers.dart';
   const Route(path: '/', component: HomeComp, name: 'Home'),
   const Route(path: '/about', component: About, name: 'About'),
   const Route(path: '/user', component: UserPanel, name: 'Users'),
+  const Route(path: '/userProductManagement', component: userProductManagement, name: 'UserProductManagement'),
 ])
 class LogisticApp implements AfterViewInit {
   @ViewChild(HeaderPanel)
