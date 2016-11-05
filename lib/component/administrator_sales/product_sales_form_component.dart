@@ -8,8 +8,8 @@ const List<String> _products = const [
   'ProductoA',
   'ProductoB ',
   'ProductoC',
-
 ];
+
 @Component(
     selector: 'product-sales-form',
     templateUrl: 'product_sales_form_component.html',
@@ -23,6 +23,3 @@ class ProductSalesFormComponent {
     submitted = true;
   }
 }
-
-
-
