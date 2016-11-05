@@ -11,7 +11,7 @@
         <br><br><br><br><br><br> <!-- placeholder -->
 
         <!-- ruser definido en header_panel.dart junto con función que cambia el valor -->
-        <div *ngIf="headerPanel.ruser == true" >
+        <div *ngIf="headerPanel.optionAdm == 2" >
             <h2> <font color="white">Registrar Usuario</font> </h2>
 
             <form role="form">
@@ -61,7 +61,7 @@
         </div>
 
         <!-- muser definido en header_panel.dart junto con función que cambia el valor -->
-        <div *ngIf="headerPanel.muser == true" >
+        <div *ngIf="headerPanel.optionAdm == 1" >
             <h2> <font color="white">Modificar Usuario</font> </h2>
 
             <table style="width:100%">
