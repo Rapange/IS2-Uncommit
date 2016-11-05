@@ -18,7 +18,7 @@ const List<String> _products = const [
 class ProductSalesFormComponent {
   List<String> get products => _products;
   bool submitted = false;
-  ProductSales model = new ProductSales(1,"Caja",100,17,false,_products[0]);
+  ProductSales model = new ProductSales(1,"Caja",100,17,_products[0]);
   onSubmit() {
     submitted = true;
   }
