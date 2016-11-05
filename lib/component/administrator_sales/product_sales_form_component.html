@@ -1,5 +1,6 @@
-<div class="container">
-  <div [hidden]="submitted">
+<div class="container"  >
+  <div class="col-md-6">
+  <div >
     <h1>Produc Sales Form</h1>
     <form (ngSubmit)="onSubmit()" #productFormSales="ngForm">
       <div class="form-group">
@@ -40,12 +41,18 @@
     <button type="submit" class="btn btn-default"
             [disabled]="!productFormSales.form.valid">Submit</button>
   </form>
+    </div>
 </div>
-<div [hidden]="!submitted">
-  Los datos modificados Fueron
-  {{model.name}}
-  {{model.price}}
-  {{model.quantity}}
-  {{model.productType}}
-</div>
+
+
+    <div class="col-md-6">
+      <div [hidden]="!submitted">
+        <h2>Product Data</h2>
+        <li>{{model.name}}</li>
+        <li>{{model.price}}</li>
+        <li>{{model.quantity}}</li>
+        <li>{{model.productType}}</li>
+      </div>
+    </div>
+
 </div>
