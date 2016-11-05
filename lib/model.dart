@@ -8,7 +8,6 @@ class ApplicationInfo {
   String name;
   String version;
   ApplicationBuildInfo buildInfo;
-
   ApplicationInfo({this.name, this.version, this.buildInfo});
 }
 
@@ -34,7 +33,6 @@ class User {
 
 @Entity()
 class ProductSales {
-
   int idProduct;
   String name;
   int  price;
@@ -45,3 +43,11 @@ class ProductSales {
 }
 
 
+@Entity()
+class ProductOut {
+  String name;
+  int quantity;
+  String receiver;
+  String phone;
+  ProductOut(this.name, this.quantity,this.receiver,this.phone);
+}
