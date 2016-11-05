@@ -1,6 +1,10 @@
 <div class="container">
-  <div [hidden]="submitted">
-    <h1>Produc Out Form</h1>
+
+  <div class="col-md-6">
+
+  <!--<div [hidden]="submitted">-->
+  <div>
+  <h1>Produc Out Form</h1>
     <form (ngSubmit)="onSubmit()" #productFormOut="ngForm">
       <div class="form-group">
         <label for="name"> <font color="white">Name:</font></label>
@@ -45,12 +49,15 @@
             [disabled]="!productFormOut.form.valid">Submit</button>
   </form>
 </div>
+</div>
+<div class="col-md-6">
 <div [hidden]="!submitted">
   Los datos modificados Fueron
   {{model.name}}
   {{model.receiver}}
   {{model.phone}}
   {{model.quantity}}
-  
+
+</div>
 </div>
 </div>
