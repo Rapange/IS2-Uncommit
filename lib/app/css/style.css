@@ -75,9 +75,11 @@ body.sub-page .logo {margin: 110px 0 80px;background: url(../images/bg.jpg) fixe
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {background-color: #DE5781;}
 
-.navbar-default .nav li a {text-transform: uppercase;font-family: Helvetica,Arial,sans-serif;font-weight: 400;letter-spacing: 1px;color: #333;}
+
+.navbar-default .nav li a {text-transform: uppercase;font-family: A1,sans-serif;font-size: 14px;letter-spacing: 1px;color: #333;}
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {outline: 0;color: #DE5781;}
+
 
 .navbar-default .nav-justified{}
 .navbar-default .nav-justified li {border-right: 1px solid #DE5781;border-top: 1px solid #DE5781;border-bottom: 1px solid #DE5781;background-color: #668284;}
@@ -92,6 +94,7 @@ body.sub-page .logo {margin: 110px 0 80px;background: url(../images/bg.jpg) fixe
 @media(max-width:768px) {
 	.navbar-default .navbar-brand {display: block;}
 }
+
 
 /* Logo */
 .logo-image {

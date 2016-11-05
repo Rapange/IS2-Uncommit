@@ -24,6 +24,7 @@ class LogisticApp implements AfterViewInit {
   HeaderPanel headerPanel;
   bool isLoading = true;
   bool added = false;
+  bool init= false;
   List<String> groups = ['Grupo 1', 'Grupo 2', 'Grupo 3'];
   List<String> subGroups = ['Subgrupo 1','Subgrupo 2'];
   String currentGroup = 'Grupo';

@@ -13,13 +13,17 @@ class HeaderPanel implements AfterViewInit {
   ApplicationService applicationService;
   ApplicationInfo applicationInfo;// = new ApplicationInfo(name: "DEFAULT APP NAME");
   HeaderPanel(ApplicationService this.applicationService);
-  bool rproduct = false;
+  var rproduct = 1;
   void ngAfterViewInit() {
     applicationService.getApplicationInfo().then((ApplicationInfo appInfo) {
       applicationInfo = appInfo;
     });
   }
-  void clickRProduct(){
-    this.rproduct = !this.rproduct;
+  void registerNewProduct(){
+    this.rproduct = 1;
+  }
+
+  void registerNewProductType(){
+    this.rproduct = 2;
   }
 }

@@ -8,12 +8,12 @@
         <a [routerLink]="['About']">About</a>
     </nav>
     <button style="display: none;" (click)="goAbout()">Go</button>
-     <div class="col-md-12">
+     <div class="col-md-12" *ngIf="!init == true">
          
          <br><br><br><br><br><br> <!-- placeholder -->
 
          <!-- rproduct definido en header_panel.dart junto con función que cambia el valor -->
-         <div *ngIf="headerPanel.rproduct == true" class="centered">
+         <div *ngIf="headerPanel.rproduct == 1 " class="centered">
             <h2> Registrar Producto</h2>
             
                 <font color="white">Descripci&oacute;n:</font> <input [(ngModel)]="descripcion"> <button (click)="add()"> Agregar </button>
@@ -53,11 +53,33 @@
                 </tr>
             </table>
              
-            <div *ngIf="added==true"> 
+            <div *ngIf="added==true">
                 <font color="white"> Su producto se ha agregado. </font> 
             </div>
             
          </div>
+         <div *ngIf="headerPanel.rproduct == 2 " class="centered">
+             <div class="row">
+                 <div class="col-md-6">
+                     <h2> Registrar un Nuevo Tipo de Producto</h2>
+                     <form>
+                         <fieldset>
+                             <input placeholder="Nombre del nuevo tipo" type="text" tabindex="1" required autofocus>
+                         </fieldset>
+                         <fieldset>
+                             <input placeholder="Descripcion del tipo" type="text" tabindex="1" required autofocus>
+                         </fieldset>
+                         <button class="btn" type="button">Listo</button>
+                     </form>
+                 </div>
+                 <div class="col-md-6">
+                     <h2> Tipos de Producto Actuales</h2>
+                 </div>
+             </div>
+
+         </div>
+
+
 
 
     </div>
