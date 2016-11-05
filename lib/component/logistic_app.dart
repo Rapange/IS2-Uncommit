@@ -22,7 +22,12 @@ class LogisticApp implements AfterViewInit {
   @ViewChild(HeaderPanel)
   HeaderPanel headerPanel;
   bool isLoading = true;
-
+  bool added = false;
+  List<String> type = ['Administrador de Ventas', 'Administrador de Producto'];
+  String currentType = 'Tipo de usuario';
+  String nombre = '';
+  String apellido = '';
+  String correo = '';
   @ViewChild(FooterPanel)
   FooterPanel footerPanel;
 
@@ -36,6 +41,14 @@ class LogisticApp implements AfterViewInit {
 
   void goAbout() {
     router.navigate(['About']);
+  }
+
+  void catchType(String type){
+    this.currentType = type;
+  }
+
+  void add(){
+    this.added = true;
   }
 }
 

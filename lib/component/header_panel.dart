@@ -14,10 +14,13 @@ class HeaderPanel implements AfterViewInit {
   ApplicationInfo applicationInfo;// = new ApplicationInfo(name: "DEFAULT APP NAME");
 
   HeaderPanel(ApplicationService this.applicationService);
-
+  bool ruser = false;
   void ngAfterViewInit() {
     applicationService.getApplicationInfo().then((ApplicationInfo appInfo) {
       applicationInfo = appInfo;
     });
+  }
+  void clickRUser(){
+    this.ruser = !this.ruser;
   }
 }
