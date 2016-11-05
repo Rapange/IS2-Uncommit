@@ -6,7 +6,7 @@ import 'package:angular2/router.dart';
 import 'package:logistic_ui/component/user/user_panel.dart';
 import 'package:logistic_ui/component/administrator_sales/product_sales_form_component.dart';/*Incluyendo Componente ProductoSales*/
 
-import 'package:logistic_ui/component/administrator_product_out/product_out_form_component.dart'; /*Incluyendo Componente ProdcutsOut*/
+import 'package:logistic_ui/component/administrator_sales/product_out_form_component.dart'; /*Incluyendo Componente ProdcutsOut*/
 
 
 import 'package:logistic_ui/component/header_panel.dart';
