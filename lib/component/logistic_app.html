@@ -13,8 +13,8 @@
          <br><br><br><br><br><br> <!-- placeholder -->
 
          <!-- rproduct definido en header_panel.dart junto con función que cambia el valor -->
-         <div *ngIf="headerPanel.rproduct == 1 " class="centered">
-            <h2> Registrar Producto</h2>
+         <div *ngIf="headerPanel.option == 1 " class="centered">
+            <h2> Registrar un nuevo producto</h2>
             
                 <font color="white">Descripci&oacute;n:</font> <input [(ngModel)]="descripcion"> <button (click)="add()"> Agregar </button>
             
@@ -54,11 +54,11 @@
             </table>
              
             <div *ngIf="added==true">
-                <font color="white"> Su producto se ha agregado. </font> 
+                <font color="white"> Su producto ha sido registrado. </font> 
             </div>
             
          </div>
-         <div *ngIf="headerPanel.rproduct == 2 " class="centered">
+         <div *ngIf="headerPanel.option == 2 " class="centered">
              <div class="row">
                  <div class="col-md-6">
                      <h2> Registrar un Nuevo Tipo de Producto</h2>
@@ -76,7 +76,16 @@
                      <h2> Tipos de Producto Actuales</h2>
                  </div>
              </div>
-
+         </div>
+         
+         <div *ngIf="headerPanel.option == 3" class="centered">
+            <!-- Aquí van las opciones de registrar un nuevo proveedor -->
+             <h2> Registrar un nuevo proveedor</h2>
+         </div>
+         
+         <div *ngIf="headerPanel.option == 4" class="centered">
+            <!-- Aquí van las opciones de ver almacén -->
+             <h2> Ver Almac&eacute;n</h2>
          </div>
 
 
