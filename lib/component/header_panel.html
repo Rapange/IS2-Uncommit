@@ -13,8 +13,8 @@
             <a class="navbar-brand page-scroll" href="#">{{applicationInfo.name}}</a>
         </div>
         <!-------------------------------------------------------------->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <div class="col-md-2">
+         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+             <div class="col-md-2">
                 <ul class="nav navbar-justified">
                     <li class="dropdown">
                         <a href="#user">Administraci&oacute;n de productos<span class="sr-only">(current)</span></a>
@@ -24,25 +24,21 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-8">
+            <!-- <div class="col-md-8">
                 <ul class="nav navbar-nav navbar-justified">
-                    <li><a href="#registerProduct">Registrar producto/material</a></li>
-                    <li><a href="#registerProductType">Registrar nuevo tipo de producto/material</a></li>
-                    <li><a href="#registerProvider">Registrar proveedor</a></li>
-                    <li><a href="#seeWarehouse">Ver almac&eacute;n</a></li>
+                    <li (click)="registerNewProduct()"><a href="#">Registrar producto/material</a></li>
+                    <li (click)="registerNewProductType()"><a href="#">Registrar nuevo tipo de producto/material</a></li>
+                    <li (click)="registerNewProvider()"><a href="#">Registrar proveedor</a></li>
+                    <li (click)="seeWarehouse()"><a href="#">Ver almac&eacute;n</a></li>
 
                 </ul>
             </div>
             <div class="col-md-2">
                 <ul class="nav navbar-nav navbar-justified">
                     <li><a href="#">Nombre Usuario</a></li>
-
-
-                    <!--<div *ngIf="test == true">
-                    <button class="btn"> Hola </button>
-                    </div>-->
                 </ul>
-            </div>
+            </div> -->
+            <router-outlet></router-outlet>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
