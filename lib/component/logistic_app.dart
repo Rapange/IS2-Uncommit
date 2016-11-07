@@ -9,6 +9,7 @@ import 'package:logistic_ui/component/footer_panel.dart';
 import 'package:logistic_ui/providers.dart';
 
 
+
 @Component(
     selector: 'logistic-app',
     templateUrl: 'logistic_app.html',
@@ -25,11 +26,11 @@ class LogisticApp implements AfterViewInit {
   bool isLoading = true;
   bool added = false;
   bool init= false;
-  List<String> groups = ['Grupo 1', 'Grupo 2', 'Grupo 3'];
+  /*List<String> groups = ['Grupo 1', 'Grupo 2', 'Grupo 3'];
   List<String> subGroups = ['Subgrupo 1','Subgrupo 2'];
   String currentGroup = 'Grupo';
   String currentSubGroup = 'Subgrupo';
-  String descripcion = '';
+  String descripcion = '';*/
   @ViewChild(FooterPanel)
   FooterPanel footerPanel;
 
@@ -45,7 +46,7 @@ class LogisticApp implements AfterViewInit {
     router.navigate(['About']);
   }
 
-  void catchGroup(String group){
+  /*void catchGroup(String group){
     this.currentGroup = group;
   }
 
@@ -55,6 +56,9 @@ class LogisticApp implements AfterViewInit {
 
   void add(){
     this.added = true;
+  }*/
+  void addProvider(){
+
   }
 }
 
