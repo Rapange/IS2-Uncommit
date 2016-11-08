@@ -13,7 +13,7 @@ import 'package:logistic_ui/component/user_product_management/index/user_product
 /*@RouteConfig(const [
   const Route(path: '/user_product_management/index', component: UserProductManagement, name: 'UserProductManagementHome'),
 ])*/
-@View(templateUrl: 'header_panel.html', directives: const[ROUTER_DIRECTIVES, UserProductManagement,UserProductManagement, NgIf, NgFor])
+@View(templateUrl: 'header_panel.html', directives: const[ROUTER_DIRECTIVES, UserProductManagement, NgIf, NgFor])
 class HeaderPanel implements AfterViewInit {
   ApplicationService applicationService;
   ApplicationInfo applicationInfo;// = new ApplicationInfo(name: "DEFAULT APP NAME");
