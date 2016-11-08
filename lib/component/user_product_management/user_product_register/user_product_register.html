@@ -16,7 +16,7 @@
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownGroup">
                       <!-- Muestra cada elemento de la lista groups definida en logistic_app.dart -->
-                    <li *ngFor="let group of groups" (click)="catchGroup(group)"><a href="#">{{ group }}</a></li>
+                    <li *ngFor="let group of groups" (click)="catchGroup(group)"><a>{{ group }}</a></li>
                   </ul>
                 </div>
                     </td>
@@ -30,7 +30,7 @@
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownSubGroup">
                       <!-- Muestra cada elemento de la lista subGroups definida en logistic_app.dart -->
-                    <li *ngFor="let subGroup of subGroups" (click)="catchSubGroup(subGroup)"><a href="#">{{ subGroup }}</a></li>
+                    <li *ngFor="let subGroup of subGroups" (click)="catchSubGroup(subGroup)"><a>{{ subGroup }}</a></li>
                   </ul>
                 </div>
                     </td>

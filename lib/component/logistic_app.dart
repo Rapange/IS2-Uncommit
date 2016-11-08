@@ -8,7 +8,10 @@ import 'package:logistic_ui/component/header_panel.dart';
 import 'package:logistic_ui/component/footer_panel.dart';
 import 'package:logistic_ui/providers.dart';
 
-
+import 'package:logistic_ui/component/user_product_management/user_product_register/user_product_register.dart';
+import 'package:logistic_ui/component/user_product_management/user_product_see_warehouse/user_product_see_warehouse.dart';
+import 'package:logistic_ui/component/user_product_management/user_product_provider_register/user_product_provider_register.dart';
+import 'package:logistic_ui/component/user_product_management/user_product_type_register/user_product_type_register.dart';
 
 @Component(
     selector: 'logistic-app',
@@ -19,6 +22,10 @@ import 'package:logistic_ui/providers.dart';
   const Route(path: '/', component: HomeComp, name: 'Home'),
   const Route(path: '/about', component: About, name: 'About'),
   const Route(path: '/user', component: UserPanel, name: 'Users'),
+  const Route(path: '/user_product_management/user_product_register', component: UserProductRegister, name: 'Register'),
+  const Route(path: '/user_product_management/user_product_see_warehouse', component: UserProductSeeWarehouse, name: 'Warehouse'),
+  const Route(path: '/user_product_management/user_product_provider_register', component: UserProductProviderRegister, name: 'Provider'),
+  const Route(path: '/user_product_management/user_product_type_register', component: UserProductTypeRegister, name: 'Type'),
 ])
 class LogisticApp implements AfterViewInit {
   @ViewChild(HeaderPanel)
@@ -26,11 +33,6 @@ class LogisticApp implements AfterViewInit {
   bool isLoading = true;
   bool added = false;
   bool init= false;
-  /*List<String> groups = ['Grupo 1', 'Grupo 2', 'Grupo 3'];
-  List<String> subGroups = ['Subgrupo 1','Subgrupo 2'];
-  String currentGroup = 'Grupo';
-  String currentSubGroup = 'Subgrupo';
-  String descripcion = '';*/
   @ViewChild(FooterPanel)
   FooterPanel footerPanel;
 
@@ -46,20 +48,6 @@ class LogisticApp implements AfterViewInit {
     router.navigate(['About']);
   }
 
-  /*void catchGroup(String group){
-    this.currentGroup = group;
-  }
-
-  void catchSubGroup(String subGroup){
-    this.currentSubGroup = subGroup;
-  }
-
-  void add(){
-    this.added = true;
-  }*/
-  void addProvider(){
-
-  }
 }
 
 @Component(selector: 'd')
