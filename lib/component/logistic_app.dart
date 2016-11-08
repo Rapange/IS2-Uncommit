@@ -8,7 +8,7 @@ import 'package:logistic_ui/component/administrator_sales/product_sales_form_com
 import 'package:logistic_ui/component/administrator_sales/report_sales.dart';/*Incluyendo Componente ProductoSales*/
 
 import 'package:logistic_ui/component/administrator_sales/product_out_form_component.dart'; /*Incluyendo Componente ProdcutsOut*/
-
+import 'package:logistic_ui/component/administrator_sales/product_reportOut_component.dart';
 
 import 'package:logistic_ui/component/header_panel.dart';
 import 'package:logistic_ui/component/footer_panel.dart';
@@ -26,6 +26,8 @@ import 'package:logistic_ui/providers.dart';
   const Route(path: '/formSales', component: ProductSalesFormComponent, name: 'ProductsSale'),
   const Route(path: '/formOut', component: ProductOutFormComponent, name: 'ProductsOut'),
   const Route(path: '/reportSales', component: ReportSalesComponent, name: 'ReportSales'),
+  const Route(path: '/reportOut', component: ProductOutReportComponent, name: 'ReportOut'),
+
 ])
 
 class LogisticApp implements AfterViewInit {
