@@ -17,8 +17,7 @@ class HeaderPanel implements AfterViewInit {
   ApplicationService applicationService;
   ApplicationInfo applicationInfo;// = new ApplicationInfo(name: "DEFAULT APP NAME");
 
-  /*HeaderPanel(ApplicationService this.applicationService);//, Router this.router);
-
+  /*
   @ViewChild(UserAdministratorManagement)
   UserAdministratorManagement userAdministratorManagement;
 */
