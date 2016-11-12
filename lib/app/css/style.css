@@ -94,15 +94,6 @@ body.sub-page .logo {margin: 110px 0 80px;background: url(../images/bg.jpg) fixe
 .navbar-toggle:focus,
 .navbar-toggle:active {outline: 0;}
 
-@media(min-width:768px) {
-    .navbar-default {padding: 25px 0;border: 0;background-color: #e3d1a2;-webkit-transition: padding .3s;-moz-transition: padding .3s;transition: padding .3s;}
-    .navbar-default.navbar-shrink {padding: 0px 0;background-color: #668284;}
-    .navbar-default.navbar-shrink .navbar-brand {font-size: 1.5em;}
-}
-@media(max-width:768px) {
-	.navbar-default .navbar-brand {display: block;}
-}
-
 /* Logo */
 .logo-image {
     width: 140%;
