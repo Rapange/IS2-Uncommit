@@ -8,6 +8,9 @@ import 'package:logistic_ui/component/header_panel.dart';
 import 'package:logistic_ui/component/footer_panel.dart';
 import 'package:logistic_ui/providers.dart';
 
+import 'package:logistic_ui/component/user_administrator/user_administrator_register/user_administrator_register.dart';
+import 'package:logistic_ui/component/user_administrator/user_administrator_modify/user_administrator_modify.dart';
+
 @Component(
     selector: 'logistic-app',
     templateUrl: 'logistic_app.html',
@@ -17,26 +20,15 @@ import 'package:logistic_ui/providers.dart';
   const Route(path: '/', component: HomeComp, name: 'Home'),
   const Route(path: '/about', component: About, name: 'About'),
   const Route(path: '/user', component: UserPanel, name: 'Users'),
+  const Route(path: '/user_administrator/user_administrator_register', component: UserAdministratorRegister, name: 'Register'),
+  const Route(path: '/user_administrator/user_administrator_modify', component: UserAdministratorRegister, name: 'Modified'),
 ])
 class LogisticApp implements AfterViewInit {
   @ViewChild(HeaderPanel)
   HeaderPanel headerPanel;
   bool isLoading = true;
   bool added = false;
-  bool modified = false;
-  //Variables para registrar un usuario
-  List<String> type = ['Administrador de Ventas', 'Administrador de Producto'];
-  String currentType = 'Tipo de usuario';
-  String nombre = '';
-  String apellido = '';
-  String correo = '';
-  //Variables para modificar un usuario
-  List<String> ids = ['1', '2', '3', '4'];
-  String currentIds = 'ID de usuario';
-  String mnombre = '';
-  String mapellido = '';
-  String mcorreo = '';
-
+  bool init= false;
   @ViewChild(FooterPanel)
   FooterPanel footerPanel;
 
@@ -52,19 +44,6 @@ class LogisticApp implements AfterViewInit {
     router.navigate(['About']);
   }
 
-  void catchType(String type){
-    this.currentType = type;
-  }
-
-  void catchIds(String ids){
-    this.currentIds = ids;
-  }
-  void add(){
-    this.added = true;
-  }
-  void modify(){
-    this.modified = true;
-  }
 }
 
 @Component(selector: 'd')

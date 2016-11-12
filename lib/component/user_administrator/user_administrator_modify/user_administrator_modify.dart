@@ -5,9 +5,9 @@ import 'package:logistic_ui/request.dart';
 import 'package:logistic_ui/providers.dart';
 import 'package:logistic_ui/model.dart';
 
-@Component(selector: 'user-administrator-register', viewProviders: const [LOGISTIC_SERVICE_PROVIDERS])
-@View(templateUrl: 'user_administrator_register.html', directives: const[ROUTER_DIRECTIVES, NgIf, NgFor])
-class UserAdministratorRegister{
+@Component(selector: 'user-administrator-modify', viewProviders: const [LOGISTIC_SERVICE_PROVIDERS])
+@View(templateUrl: 'user_administrato_modify.html', directives: const[ROUTER_DIRECTIVES, NgIf, NgFor])
+class UserAdministratorModify{
   bool modified = false;
 
   List<String> ids = ['1', '2', '3', '4'];
