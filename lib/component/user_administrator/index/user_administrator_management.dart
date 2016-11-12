@@ -9,7 +9,4 @@ import 'package:logistic_ui/model.dart';
 
 @View(templateUrl: 'user_administrator_management.html', directives: const[ROUTER_DIRECTIVES, NgIf, NgFor])
 class UserAdministratorManagement {
-
-
-
 }
