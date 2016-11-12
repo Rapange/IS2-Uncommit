@@ -14,6 +14,11 @@ import 'package:logistic_ui/component/header_panel.dart';
 import 'package:logistic_ui/component/footer_panel.dart';
 import 'package:logistic_ui/providers.dart';
 
+import 'package:logistic_ui/component/user_product_management/user_product_register/user_product_register.dart';
+import 'package:logistic_ui/component/user_product_management/user_product_see_warehouse/user_product_see_warehouse.dart';
+import 'package:logistic_ui/component/user_product_management/user_product_provider_register/user_product_provider_register.dart';
+import 'package:logistic_ui/component/user_product_management/user_product_type_register/user_product_type_register.dart';
+
 @Component(
     selector: 'logistic-app',
     templateUrl: 'logistic_app.html',
@@ -28,13 +33,18 @@ import 'package:logistic_ui/providers.dart';
   const Route(path: '/reportSales', component: ReportSalesComponent, name: 'ReportSales'),
   const Route(path: '/reportOut', component: ProductOutReportComponent, name: 'ReportOut'),
 
+  const Route(path: '/user_product_management/user_product_register', component: UserProductRegister, name: 'Register'),
+  const Route(path: '/user_product_management/user_product_see_warehouse', component: UserProductSeeWarehouse, name: 'Warehouse'),
+  const Route(path: '/user_product_management/user_product_provider_register', component: UserProductProviderRegister, name: 'Provider'),
+  const Route(path: '/user_product_management/user_product_type_register', component: UserProductTypeRegister, name: 'Type'),
 ])
 
 class LogisticApp implements AfterViewInit {
   @ViewChild(HeaderPanel)
   HeaderPanel headerPanel;
   bool isLoading = true;
-
+  bool added = false;
+  bool init= false;
   @ViewChild(FooterPanel)
   FooterPanel footerPanel;
 
@@ -51,6 +61,7 @@ class LogisticApp implements AfterViewInit {
   void goAbout() {
     router.navigate(['About']);
   }
+
 }
 
 @Component(selector: 'd')

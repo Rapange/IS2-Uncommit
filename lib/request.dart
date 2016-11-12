@@ -84,7 +84,7 @@ class ApplicationService extends BaseService {
     return dson.decode(responseText, new User(), true);
   }
   Future<ApplicationInfo> getApplicationInfo() {
-    ApplicationInfo appInfo = new ApplicationInfo(name: "App Stub", version: "0.0.1.DEV-MODE", buildInfo:
+    ApplicationInfo appInfo = new ApplicationInfo(name: "Blazing Box", version: "0.0.1.DEV-MODE", buildInfo:
     new ApplicationBuildInfo(revision: "000", branch: "none", buildTime: new DateTime.now()));
     return (new Completer<ApplicationInfo>()..complete(appInfo)).future;
   }
