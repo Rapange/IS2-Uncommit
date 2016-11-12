@@ -1,4 +1,5 @@
 <header-panel></header-panel>
+
 <div #content id="content">
     <div id="message" [hidden]="!isLoading">Logistic App: Loading...</div>
     <nav style="display: none;" >
@@ -6,6 +7,20 @@
         <a [routerLink]="['About']">About</a>
     </nav>
     <button style="display: none;" (click)="goAbout()">Go</button>
+     <div class="col-md-12" *ngIf="!init == true">
+         
+         <br><br><br> <!-- placeholder -->
+
+     </div>
+
     <router-outlet></router-outlet>
+
+    <div class="col-md-12">
+
+        <br><br><br> <!-- placeholder -->
+
+    </div>
 </div>
+    
+
 <footer-panel></footer-panel>
