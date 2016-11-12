@@ -21,7 +21,7 @@ import 'package:logistic_ui/component/user_administrator/user_administrator_modi
   const Route(path: '/about', component: About, name: 'About'),
   const Route(path: '/user', component: UserPanel, name: 'Users'),
   const Route(path: '/user_administrator/user_administrator_register', component: UserAdministratorRegister, name: 'Register'),
-  const Route(path: '/user_administrator/user_administrator_modify', component: UserAdministratorRegister, name: 'Modified'),
+  const Route(path: '/user_administrator/user_administrator_modify', component: UserAdministratorModify, name: 'Modified'),
 ])
 class LogisticApp implements AfterViewInit {
   @ViewChild(HeaderPanel)

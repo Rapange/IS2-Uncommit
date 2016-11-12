@@ -6,7 +6,7 @@ import 'package:logistic_ui/providers.dart';
 import 'package:logistic_ui/model.dart';
 
 @Component(selector: 'user-administrator-modify', viewProviders: const [LOGISTIC_SERVICE_PROVIDERS])
-@View(templateUrl: 'user_administrato_modify.html', directives: const[ROUTER_DIRECTIVES, NgIf, NgFor])
+@View(templateUrl: 'user_administrator_modify.html', directives: const[ROUTER_DIRECTIVES, NgIf, NgFor])
 class UserAdministratorModify{
   bool modified = false;
 
