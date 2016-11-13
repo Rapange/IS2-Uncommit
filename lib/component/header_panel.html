@@ -13,9 +13,16 @@
           <a class="navbar-brand" href="#">{{applicationInfo.name}}</a>
         </div>
         <!-------------------------------------------------------------->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" *ngIf="1 == 1">
+            <user-administrator-management></user-administrator-management>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-0" *ngIf="0 == 0">
+            <user-product-management></user-product-management>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2" *ngIf="2 == 2">
             <sales-header></sales-header>
-        </div><!-- /.navbar-collapse -->
+        </div>
 
     </div><!-- /.container-fluid -->
 </nav>
