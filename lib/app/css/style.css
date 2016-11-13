@@ -102,8 +102,6 @@ body.sub-page .logo {margin: 110px 0 80px;background: url(../images/bg.jpg) fixe
 @media(max-width:768px) {
 	.navbar-default .navbar-brand {display: block;}
 }
-=======
->>>>>>> ca5b127745aa30274b72364e23399575d17a0f15
 
 /* Logo */
 .logo-image {
