@@ -42,6 +42,8 @@ import 'package:logistic_ui/component/user_product_management/user_product_type_
   const Route(path: '/user_product_management/user_product_see_warehouse', component: UserProductSeeWarehouse, name: 'Warehouse'),
   const Route(path: '/user_product_management/user_product_provider_register', component: UserProductProviderRegister, name: 'Provider'),
   const Route(path: '/user_product_management/user_product_type_register', component: UserProductTypeRegister, name: 'Type'),
+  const Route(path: '/user_administrator/user_administrator_register', component: UserAdministratorRegister, name: 'Register'),
+  const Route(path: '/user_administrator/user_administrator_modify', component: UserAdministratorModify, name: 'Modified'),
 ])
 
 class LogisticApp implements AfterViewInit {
