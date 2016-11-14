@@ -14,12 +14,14 @@
         </div>
         <!-------------------------------------------------------------->
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" *ngIf="1 == 1">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" *ngIf="1 == 0">
             <user-administrator-management></user-administrator-management>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-0" *ngIf="0 == 0">
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-0" *ngIf="0 == 1">
             <user-product-management></user-product-management>
         </div>
+
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2" *ngIf="2 == 2">
             <sales-header></sales-header>
         </div>
