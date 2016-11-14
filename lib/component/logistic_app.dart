@@ -4,6 +4,12 @@ import 'package:angular2/angular2.dart';
 import 'package:angular2/router.dart';
 
 import 'package:logistic_ui/component/user/user_panel.dart';
+import 'package:logistic_ui/component/administrator_sales/product_sales_form_component.dart';/*Incluyendo Componente ProductoSales*/
+import 'package:logistic_ui/component/administrator_sales/report_sales.dart';/*Incluyendo Componente ProductoSales*/
+
+import 'package:logistic_ui/component/administrator_sales/product_out_form_component.dart'; /*Incluyendo Componente ProdcutsOut*/
+import 'package:logistic_ui/component/administrator_sales/product_reportOut_component.dart';
+
 import 'package:logistic_ui/component/header_panel.dart';
 import 'package:logistic_ui/component/footer_panel.dart';
 import 'package:logistic_ui/providers.dart';
@@ -38,6 +44,11 @@ import 'package:logistic_ui/component/user_product_management/user_product_type_
   const Route(path: '/', component: HomeComp, name: 'Home'),
   const Route(path: '/about', component: About, name: 'About'),
   const Route(path: '/user', component: UserPanel, name: 'Users'),
+  const Route(path: '/formSales', component: ProductSalesFormComponent, name: 'ProductsSale'),
+  const Route(path: '/formOut', component: ProductOutFormComponent, name: 'ProductsOut'),
+  const Route(path: '/reportSales', component: ReportSalesComponent, name: 'ReportSales'),
+  const Route(path: '/reportOut', component: ProductOutReportComponent, name: 'ReportOut'),
+
   const Route(path: '/user_product_management/user_product_register', component: UserProductRegister, name: 'Register'),
   const Route(path: '/user_product_management/user_product_see_warehouse', component: UserProductSeeWarehouse, name: 'Warehouse'),
   const Route(path: '/user_product_management/user_product_provider_register', component: UserProductProviderRegister, name: 'Provider'),
@@ -54,6 +65,8 @@ class LogisticApp implements AfterViewInit {
   bool init= false;
   @ViewChild(FooterPanel)
   FooterPanel footerPanel;
+
+
 
   Router router;
 

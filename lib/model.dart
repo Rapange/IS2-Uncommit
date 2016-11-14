@@ -8,7 +8,6 @@ class ApplicationInfo {
   String name;
   String version;
   ApplicationBuildInfo buildInfo;
-
   ApplicationInfo({this.name, this.version, this.buildInfo});
 }
 
@@ -31,3 +30,49 @@ class User {
   String email;
   String get name => "$firstName $lastName";
 }
+
+@Entity()
+class ProductSales {
+  int idProduct;
+  String name;
+  int  price;
+  int  quantity;
+  static final DateFormat _formatter = new DateFormat("yyyy-MM-dd HH:mm:ss");
+  bool avaible;
+  String productType;
+  String get data => "$name $price";
+  ProductSales(this.idProduct,this.name,this.price, this.quantity, this.productType);
+
+}
+
+
+@Entity()
+class ProductOut
+{
+  String name;
+  int quantity;
+  String receiver;
+  String phone;
+
+  ProductOut(this.name, this.quantity, this.receiver, this.phone);
+
+}
+/*
+@Entity()
+class Product
+{
+
+  int idProduct;
+  String name;
+  int price;
+  int quantityEntry;
+  int quantityOut;
+  int stack;
+  static final DateFormat _formatter = new DateFormat("yyyy-MM-dd HH:mm:ss");
+  String productType;
+  String receiver;
+  String phone;
+
+  Product(this.idProduct, this.name, this.price, this.quantityEntry, this.quantityOut,this.stack, this.productType, this.receiver, this.phone);
+}
+*/
