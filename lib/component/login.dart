@@ -21,10 +21,11 @@ class LogIn implements AfterViewInit {
   bool added = false;
   bool init= false;
   int isWhat = 0;
-  void checkProvider(String name){
+  void checkProvider(){
     window.open("http://www.google.com", "google");
-    applicationService.getProvider(name).then((List<Provider> provider){
-        if(provider.length == 1) isWhat = 1;
+    //isWhat = 1;
+    applicationService.getProvider('juan').then((List<UserProvider> provider){
+        if(provider.length == 1) {isWhat = 1;}
     });
   }
 }

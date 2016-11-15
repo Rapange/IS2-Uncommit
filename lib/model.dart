@@ -59,7 +59,7 @@ class ProductOut
 }
 
 @Entity()
-class Provider
+class UserProvider
 {
   int id_proveedor;
   String name_proveedor;
