@@ -22,10 +22,10 @@ class LogIn implements AfterViewInit {
   bool init= false;
   int isWhat = 0;
   void checkProvider(){
-    window.open("http://www.google.com", "google");
+    //window.open("http://www.google.com", "google");
     //isWhat = 1;
-    applicationService.getProvider('juan').then((List<UserProvider> provider){
-        if(provider.length == 1) {isWhat = 1;}
+    applicationService.getUserProvider('juan').then((UserProvider userProvider){
+        if(userProvider != null) {isWhat = 1;}
     });
   }
 }
