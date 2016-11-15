@@ -12,10 +12,11 @@
 
 
                     <p>
-                        <input class="btn btn-default" type="button" value="Submit" ng-click="ButtonClick()" />
+                        <input class="btn btn-default" type="button" value="Submit" ng-click="checkProvider(juan)" />
                         <br><br>
                         <span ng-bind="Message"></span>
                     </p>
+                   
                 </fieldset>
             </div>
             <div class="col-md-4 cent">
@@ -26,3 +27,5 @@
         </div>
     </div>
 </div>
+
+ <div *ngIf="isWhat==1"> Es un Administrador de Productos</div>

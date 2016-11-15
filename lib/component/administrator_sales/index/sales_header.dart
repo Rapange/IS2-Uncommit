@@ -11,7 +11,7 @@ import 'package:logistic_ui/request.dart';
     templateUrl: 'sales_header.html',
     viewProviders: const [LOGISTIC_SERVICE_PROVIDERS])
 
-@View(templateUrl:'sales_header.html',directives: const[ROUTER_DIRECTIVES, NgIf, NgFor] )
+//@View(templateUrl:'sales_header.html',directives: const[ROUTER_DIRECTIVES, NgIf, NgFor] )
 class SalesHeader {
 
 

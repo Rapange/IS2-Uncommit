@@ -41,7 +41,7 @@ class ProductSales {
   bool avaible;
   String productType;
   String get data => "$name $price";
-  ProductSales(this.idProduct,this.name,this.price, this.quantity, this.productType);
+  ProductSales({this.idProduct,this.name,this.price, this.quantity, this.productType});
 
 }
 
@@ -54,9 +54,20 @@ class ProductOut
   String receiver;
   String phone;
 
-  ProductOut(this.name, this.quantity, this.receiver, this.phone);
+  ProductOut({this.name, this.quantity, this.receiver, this.phone});
 
 }
+
+@Entity()
+class Provider
+{
+  int id_proveedor;
+  String name_proveedor;
+
+  //Provider({this.id_proveedor, this.name_proveedor});
+  String get name => "$name_proveedor";
+}
+
 /*
 @Entity()
 class Product

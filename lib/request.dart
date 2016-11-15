@@ -83,6 +83,10 @@ class ApplicationService extends BaseService {
     String responseText = await get('rest/v1/users');
     return dson.decode(responseText, new User(), true);
   }
+  Future<Provider> getProvider(String name) async {
+    String responseText = await get('proveedor/v1/proveedor/name/?name=$name');
+    return dson.decode(responseText, new Provider(),false);
+  }
   Future<ApplicationInfo> getApplicationInfo() {
     ApplicationInfo appInfo = new ApplicationInfo(name: "Blazing Box", version: "0.0.1.DEV-MODE", buildInfo:
     new ApplicationBuildInfo(revision: "000", branch: "none", buildTime: new DateTime.now()));
