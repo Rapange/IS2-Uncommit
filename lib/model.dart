@@ -25,10 +25,13 @@ class ApplicationBuildInfo {
 @Entity()
 class User {
   int id;
-  String firstName;
-  String lastName;
+  String first_name;
+  String last_name;
   String email;
-  String get name => "$firstName $lastName";
+  String account;
+  String password;
+  int user_type;
+  String get name => "$first_name $last_name";
 }
 
 @Entity()
@@ -58,17 +61,18 @@ class ProductOut
 
 }
 
-@Entity()
+/*@Entity()
 class UserProvider {
   int idProvider;
   String nameProvider;
-}
+  String get name => "$nameProvider";
+}*/
 
-/*@Entity()
-class Proveedor {
+@Entity()
+class UserProvider {
   int id_proveedor;
   String name_proveedor;
-}*/
+}
 
 
 /*
