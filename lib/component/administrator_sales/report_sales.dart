@@ -11,8 +11,8 @@ import 'package:logistic_ui/request.dart';
 
 class ReportSalesComponent {
     bool search= false;//podria no necesitarlo y al ingresar mostrrar un reporte en una fecha por default
-    //ProductOut model = new ProductOut("pintura",10,"Almacen Arequipa","0541235");
-    //onSubmit() {
-    //    submitted = true;
-    //}
+    /*ProductOut model = new ProductOut("pintura",10,"Almacen Arequipa","0541235");
+    void onSubmit() {
+        submitted = true;
+    }*/
 }

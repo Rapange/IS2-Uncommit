@@ -59,14 +59,17 @@ class ProductOut
 }
 
 @Entity()
-class UserProvider
-{
+class UserProvider {
+  int idProvider;
+  String nameProvider;
+}
+
+/*@Entity()
+class Proveedor {
   int id_proveedor;
   String name_proveedor;
+}*/
 
-  //Provider({this.id_proveedor, this.name_proveedor});
-  String get name => "$name_proveedor";
-}
 
 /*
 @Entity()

@@ -84,7 +84,7 @@ class ApplicationService extends BaseService {
     return dson.decode(responseText, new User(), true);
   }
   Future<UserProvider> getUserProvider(String name) async {
-    String responseText = await get('proveedor/v1/proveedor/name/?name=$name');
+    String responseText = await get('proveedor/v1/proveedor/name/$name');
     return dson.decode(responseText, new UserProvider(), true);
   }
   Future<ApplicationInfo> getApplicationInfo() {

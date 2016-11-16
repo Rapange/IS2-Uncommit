@@ -26,7 +26,12 @@
             </div>
         </div>
     </div>
+    <button (click)="checkProvider()"> Hola </button>
+     <ul>
+          
+          <li><a>{{ isWhat }}</a></li>
+     </ul>
+     <div *ngIf="userProvider != null"> <!--{{userProvider.idProvider}}-->Se ha encontrado un administrador de productos.</div>
 </div>
 
-<!-- <button (click)="checkProvider()"> Hola </button>
- <div *ngIf="isWhat==1"> Es un Administrador de Productos</div> -->
+

@@ -11,7 +11,7 @@ import 'package:logistic_ui/request.dart';
 
 class ProductOutFormComponent {
   bool submitted = false;
-  ProductOut model = new ProductOut("pintura",10,"Almacen Arequipa","0541235");
+  ProductOut model = new ProductOut('pintura',10,'Almacen Arequipa','0541235');
     onSubmit() {
 	submitted = true;
     }
