@@ -13,11 +13,11 @@ import 'package:logistic_ui/request.dart';
     viewProviders: const [LOGISTIC_SERVICE_PROVIDERS])
 @View(templateUrl: 'login.html',
     directives: const[ROUTER_DIRECTIVES, NgIf, NgFor])*/
-@Component(selector: 'log-in', templateUrl: 'login.html', directives: const [ROUTER_DIRECTIVES, NgIf, NgFor, LogisticApp], viewProviders: const [LOGISTIC_SERVICE_PROVIDERS])
+@Component(selector: 'log-in', templateUrl: 'login.html', directives: const [ROUTER_DIRECTIVES, LogisticApp], viewProviders: const [LOGISTIC_SERVICE_PROVIDERS])
 class LogIn implements AfterViewInit {
   ApplicationService applicationService;
   @ViewChild(LogisticApp)
-  LogisticApp headerPanel;
+  LogisticApp headerpanel;
 
   UserProvider userProvider;
   User user;
@@ -25,7 +25,6 @@ class LogIn implements AfterViewInit {
   bool isLoading = true;
   bool added = false;
   bool init= false;
-  int isWhat = 0;
   String userAccount;
   String userPassword;
   int userType = 0;
@@ -33,25 +32,12 @@ class LogIn implements AfterViewInit {
   LogIn(this.applicationService);
 
   void ngAfterViewInit(){
-        isWhat = 0;
+        
   }
-  void checkProvider(){
-    //window.open("http://www.google.com", "google");
-    print('hola');
-    //isWhat = 3;
-    applicationService.getUserProvider('juan').then((List<UserProvider> userProvider){
-        /*if(userProvider != null) {isWhat = 1;}
-        if(userProvider == null) {isWhat = 2;}*/
-        this.userProvider = userProvider[0];
-        print((userProvider[0]).name_proveedor);
-        isWhat = userProvider.length; 
-    });
-  }
-
+  
   bool checkUser(String account, String password){
     applicationService.getUserByAccount(account).then((User user){
         if(user.password == userPassword){
-            print('Si');
             this.user = user;
             this.userType = user.user_type;
             return true;
