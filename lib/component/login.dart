@@ -19,6 +19,7 @@ class LogIn implements AfterViewInit {
   @ViewChild(LogisticApp)
   LogisticApp headerpanel;
 
+  //bootstrap(LogisticApp, [ROUTER_PROVIDERS, new Provider(LocationStrategy, useClass: HashLocationStrategy)]);
   UserProvider userProvider;
   User user;
   
@@ -35,15 +36,16 @@ class LogIn implements AfterViewInit {
         
   }
   
-  bool checkUser(String account, String password){
-    applicationService.getUserByAccount(account).then((User user){
+  void checkUser(String account, String password){
+    userType = 1;
+	/*applicationService.getUserByAccount(account).then((User user){
         if(user.password == userPassword){
             this.user = user;
             this.userType = user.user_type;
             return true;
         }
         return false;
-    });
+    });*/
   }
   
   void set data(UserProvider userProvider) {

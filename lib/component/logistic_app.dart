@@ -13,6 +13,9 @@ import 'package:logistic_ui/component/administrator_sales/product_reportOut_comp
 import 'package:logistic_ui/component/header_panel.dart';
 import 'package:logistic_ui/component/footer_panel.dart';
 import 'package:logistic_ui/providers.dart';
+import 'package:logistic_ui/model.dart';
+import 'package:logistic_ui/request.dart';
+
 
 //import for user_administrator
 import 'package:logistic_ui/component/user_administrator/user_administrator_register/user_administrator_register.dart';
@@ -58,28 +61,48 @@ import 'package:logistic_ui/component/user_product_management/user_product_type_
 ])
 
 class LogisticApp implements AfterViewInit {
+  ApplicationService applicationService;
+  int userType = 0;
   @ViewChild(HeaderPanel)
-  HeaderPanel headerPanel;
+  HeaderPanel headerPanel(3);
   bool isLoading = true;
   bool added = false;
   bool init= false;
+  
+  String userAccount;
+  String userPassword;
   @ViewChild(FooterPanel)
   FooterPanel footerPanel;
-
+  User user;
 
 
   Router router;
 
-  LogisticApp(Router this.router) {}
+  LogisticApp(Router this.router, ApplicationService this.applicationService) {}
 
   void ngAfterViewInit() {
     isLoading = false;
   }
 
+  void checkUser(String account, String password){
+    //userType = 1;
+	applicationService.getUserByAccount(account).then((User user){
+        if(user.password == userPassword){
+            this.user = user;
+            this.userType = user.user_type;
+            return true;
+        }
+        return;
+    });
+  }
+  
   void goAbout() {
     router.navigate(['About']);
   }
 
+  void set dataUser(User user){
+    this.user = user;
+  }
 }
 
 @Component(selector: 'd')

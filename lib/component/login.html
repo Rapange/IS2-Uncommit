@@ -1,4 +1,9 @@
+<!--<logistic-app></logistic-app>-->
 
+<div>
+<div *ngIf="userType != 0">
+    <logistic-app></logistic-app>
+</div> 
 
  <div class="login" *ngIf="userType==0">
     <div class="container">
@@ -29,6 +34,4 @@
     </div>
 </div>
 
-<div *ngIf="userType != 0">
-    <logistic-app></logistic-app>
-</div> 
+</div>

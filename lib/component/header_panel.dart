@@ -17,16 +17,16 @@ import 'package:logistic_ui/component/user_administrator/index/user_administrato
 class HeaderPanel implements AfterViewInit {
   ApplicationService applicationService;
   ApplicationInfo applicationInfo;// = new ApplicationInfo(name: "DEFAULT APP NAME");
-
-  HeaderPanel(ApplicationService this.applicationService);//, Router this.router);
-
-
+  int userType = 0;
+  HeaderPanel(int userType, [ApplicationService this.applicationService]) {this.userType = userType;}//, Router this.router);
+  
 
   /*Para user_administrator*/
   @ViewChild(UserAdministratorManagement)
   UserAdministratorManagement userAdministratorManagement;
   @ViewChild(SalesHeader)
   SalesHeader salesHeader;
+  
 
 
   void ngAfterViewInit() {

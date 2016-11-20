@@ -6,8 +6,10 @@ import 'package:angular2/core.dart';
 import 'package:angular2/platform/common.dart';
 import 'package:dartson/dartson.dart';
 import 'package:logistic_ui/component/login.dart';
+import 'package:logistic_ui/component/logistic_app.dart';
+
 
 main() {
-  bootstrap(LogIn, [ROUTER_PROVIDERS, new Provider(LocationStrategy, useClass: HashLocationStrategy)]);
-
+  //bootstrap(LogIn /*LogisticApp*/, [ROUTER_PROVIDERS, new Provider(LocationStrategy, useClass: HashLocationStrategy)]);
+  bootstrap(LogisticApp, [ROUTER_PROVIDERS, new Provider(LocationStrategy, useClass: HashLocationStrategy)]);
 }

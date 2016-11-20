@@ -73,7 +73,7 @@ class ApplicationService extends BaseService {
   Future<User> getUser(int id) {
     Completer<User> completer = new Completer<User>();
 
-    get('rest/v1/user?id=$id').then((responseText){
+    get('user/v1/user/$id').then((responseText){
       User user = dson.decode(responseText, new User(), false);
       completer.complete(user);
     });
@@ -83,9 +83,14 @@ class ApplicationService extends BaseService {
     String responseText = await get('rest/v1/users');
     return dson.decode(responseText, new User(), true);
   }
-  Future<User> getUserByAccount(String account) async {
-    String responseText = await get('user/v1/user/account/$account');
-    return dson.decode(responseText, new User(), false);
+  Future<User> getUserByAccount(String account) {
+	Completer<User> completer = new Completer<User>();
+
+    get('user/v1/user/account/$account').then((responseText){
+      User user = dson.decode(responseText, new User(), false);
+      completer.complete(user);
+    });
+    return completer.future;
   }
   Future<List<UserProvider>> getUserProvider(String name) async {
     String responseText = await get('proveedor/v1/proveedor/name/$name');
